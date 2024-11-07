@@ -1,0 +1,22 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: gateway
+  cloud:
+    gateway:
+      enabled: true
+      routes:
+        - id: xx-service
+          uri: lb://xx-service
+          predicates:
+            - path=/xx/**,/xx/**
+    nacos:
+      discovery:
+        server-addr: 192.168.0.150:8848
+      config:
+        shared-configs:      #共享配置
+#        refresh-enabled: true  热部署
+  profiles:
+    active: dev

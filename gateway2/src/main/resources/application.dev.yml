@@ -1,0 +1,5 @@
+auth:
+  includePath: /xx/xx
+  excludePath:
+    - /xx/xx
+    - /xxx/xxx
